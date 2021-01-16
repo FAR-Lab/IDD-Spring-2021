@@ -1,11 +1,11 @@
 # Interfacing with the Pi (or Pi Toppings)
 
 The Raspberry Pi 4 has a variety of interfacing options. When you plug the pi in the red power LED turns on. Any time the SD card is accessed the green LED flashes. It has standard USB ports and HDMI ports. Less familiar it has a set of 20x2 pin headers that allow you to connect a various peripherals.
-![](https://www.raspberrypi.org/documentation/usage/gpio/images/GPIO-Pinout-Diagram-2.png)
+![pi gpio diagram](https://www.raspberrypi.org/documentation/usage/gpio/images/GPIO-Pinout-Diagram-2.png)
 To learn more about any individual pin and what it is for go to [pinout.xyz](https://pinout.xyz/pinout/3v3_power) and click on the pin. Some terms may be unfamiliar but we will go over the relevant ones as they come up.
 
 ## Pre-lab
-- Many of the componenets we will be using in this class will communicate with the I2C protocol. Prior to the lab read through [this](https://learn.sparkfun.com/tutorials/i2c/all) tutorial on how it works.
+- Many of the components we will be using in this class will communicate with the I2C protocol. Prior to the lab read through [this](https://learn.sparkfun.com/tutorials/i2c/all) tutorial on how it works.
 - In this class you will see the words Stemma, StemmaQT and Qwiic come up. these are all different kinds of connectors for use with the I2C protocol. We have tried to keep things consistent to StemmaQT and and Qwiic which are interchangeable. Read over [this](https://learn.adafruit.com/introducing-adafruit-stemma-qt/what-is-stemma) and [this](https://www.sparkfun.com/qwiic#overview) to get a better idea of what these terms mean.
 
 ## Connecting a Button

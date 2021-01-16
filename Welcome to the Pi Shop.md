@@ -12,13 +12,13 @@ This lab will introduce you to the raspberry pi. The raspberry pi is a small che
 
 #### On your computer download
 - [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
-- [Our Copy of Raspbian](ftp://farlab.infosci.cornell.edu/)
+- [Our Copy of Raspbian at ftp://farlab.infosci.cornell.edu/](ftp://farlab.infosci.cornell.edu/)
 (this is a large file and may take a few minutes to download)
 - If using windows: [Windows 10 SSH Client](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh) or [PuTTY](https://www.putty.org/)
 
 #### Setting up your OS
 1. Plug the SD card into your computer using the card reader
-2. Choose the downlaoded file for "Choose OS" and the SD card for "Choose SD card" then hit write.
+2. Choose the downloaded file for "Choose OS" and the SD card for "Choose SD card" then hit write.
 ![Imager GUI](https://www.raspberrypi.org/homepage-9df4b/static/md-67e1bf35c20ad5893450da28a449efc4.png)
 
 3. Create a file called [wpa_supplicant.conf](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) in the Boot image of the new disk. the file contents should have the following:
@@ -26,7 +26,7 @@ This lab will introduce you to the raspberry pi. The raspberry pi is a small che
 	```
 	ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 	update_config=1
-	country=<Insert 2 letter ISO 3166-1 country code here, US or CN>
+	country=<Insert 2 letter ISO 3166-1 country code here, for the United states it is US>
 	
 	network={
 	 ssid="<Name of your wireless LAN>"
