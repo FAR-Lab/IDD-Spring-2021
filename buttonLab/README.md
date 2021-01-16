@@ -7,6 +7,7 @@ To learn more about any individual pin and what it is for go to [pinout.xyz](htt
 ## Pre-lab
 - Many of the components we will be using in this class will communicate with the I2C protocol. Prior to the lab read through [this](https://learn.sparkfun.com/tutorials/i2c/all) tutorial on how it works.
 - In this class you will see the words Stemma, StemmaQT and Qwiic come up. these are all different kinds of connectors for use with the I2C protocol. We have tried to keep things consistent to StemmaQT and and Qwiic which are interchangeable. Read over [this](https://learn.adafruit.com/introducing-adafruit-stemma-qt/what-is-stemma) and [this](https://www.sparkfun.com/qwiic#overview) to get a better idea of what these terms mean.
+- In this lab you will see things like `0x6f`. This is the hexadecimal (or hex) representation for the number `111` which is represented as `1101111` in binary. You are not expected to make any kinds of conversions but should have some conceptual grasp that a hex value is just a number shown another way. Look over [this](https://learn.sparkfun.com/tutorials/hexadecimal/introduction) for an understanding of hexadecimal and [this](https://towardsdatascience.com/binary-hex-and-octal-in-python-20222488cee1) for how to manipulate them in python prior to class.
 
 ## Connecting a Button
 
@@ -67,7 +68,7 @@ I2C addresses found: ['0x6f']
 ```
 #### Read device registers
 
-With I2C devices we can read the registers directly with `button_registers.py`
+With I2C devices we can read the registers directly with `button_registers.py`. Run the command to see what the current registers for the button are. You can look [here](https://cdn.sparkfun.com/assets/learn_tutorials/1/1/0/8/Qwiic_Button_I2C_Register_Map.pdf) to try and figure out what the output means.
 
 #### Leverage abstraction
 
