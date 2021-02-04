@@ -2,6 +2,8 @@
 
 This lab will introduce you to the raspberry pi. The raspberry pi is a small cheap single board computer. It's capable of doing most things you might expect from a desktop computer. You can connect to the internet, run code, plug in a monitor and keyboard/mouse.
 
+## PreLab
+
 ## Setup
 
 #### From your kit you will need:
@@ -121,8 +123,58 @@ Write it down somewhere, because we don't know how to recover lost passwords on 
 
 ## Explore the RPi
 
+### Learning to use the command line
+
+The command line/Terminal is a powerful way to interact with your computer without using a Graphical User Interface (GUI). When you ssh on to your pi you have a prompt you can enter commands. In your terminal there is a shell, there are many shells but for this class we will use one of the most common **bash**
+
+```
+pi@ixe00:~ $ echo $SHELL
+/bin/bash
+```
+In the code above we've typed `echo $SHELL`. The `echo` tells it to print something to the screen. You could try typing `echo 'hello'` to see how that works for strings. The `$` at the front of `$SHELL` tells bash we are referring to a variable. In this case it is a variable the OS is using to store the shell program. In a folder `/bin` is a program called bash that we are currently using. 
+
+The up arrow with show the most recent command.
+
+#### Navigation in the command line
+
+There are many commands in the command line. They can take a variety of options that change how they are used. You can look these up online to learn more. Many commands have a manual page with documentation that you can see directly in the terminal by typing `man [command]`. For example:
+
+```
+pi@ixe00:~ $ man echo
+ECHO(1)                           User Commands                          ECHO(1)
+
+NAME
+       echo - display a line of text
+SYNOPSIS
+       echo [SHORT-OPTION]... [STRING]...
+       echo LONG-OPTION
+DESCRIPTION
+       Echo the STRING(s) to standard output.
+       -n     do not output the trailing newline
+       -e     enable interpretation of backslash escapes
+       -E     disable interpretation of backslash escapes (default)
+       --help display this help and exit
+       --version
+Manual page echo(1) line 1 (press h for help or q to quit)
+```
+These are some useful commands. Read the manual pages for advanced usage.
+
+* `pwd` - print working directory, tells us where on the computer we are
+* `ls` - list the things in the current directory. 
+* `cd` - change directory. This lets you move to another folder on your machine.
+* `mkdir` - make directory. You can create directories with this command
+*  `cp` - copy a file. You can copy from one place to any other place
+*  `mv` - move a file, also used to rename a file
+*  `rm` -  delete a file. To delete a folder you need the recursive flag `rm -r [folder]`
+*  `cat` - view a file
+*  `nano` - this is a text editor (there are many) that will let you edit files in terminal.
+ 
+There is plenty more to learn about using the terminal to navigate a computer but this should give a good start for getting around the raspberry pi.
+
+<!--I am considering that we should remove this section entirely and make them get used to using the terminal at the outset -->
 ### Enable X Windows
-We will want to enable X windows usage on the Raspberry Pi. (Should this not work see below for instructions on how to use VNC)
+
+For times we want to use a GUI like a normal computer we will want to enable X windows usage on the Raspberry Pi. (Should this not work see below for instructions on how to use VNC)
 
 On the Mac, please install [XQuartz](https://www.xquartz.org).
 
@@ -161,7 +213,7 @@ After that a login window should appear, use your normal logins (originally: Acc
 At that point the normal RPI desktop should appear and you can start and stop programs from here. 
 
 
-![](images/VNC3.png)
+<!--![](images/VNC3.png)
 The image below shows where to find the terminal and how to run one of the object recognition examples. 
 
 **Make sure to plug your camera if you try this.***
@@ -173,7 +225,7 @@ For easy copy and paste:
 cd pi-object-detection/
 ./test_object_detection.sh 
 ```
-
+-->
 ### Try some Python code on the Pi
 
 To keep our python dependencies and packages organized we will be using [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html#managing-environments). 
@@ -280,8 +332,9 @@ You might be required to login in the terminal to your GitHub account. For more 
 
 
 #### Pro-tips and other commands
-`nano` is a general purpose text editor, so you can use it for any type of text file like the `.js`, `.html`, and `.css` files in this project.
+`nano` is a general purpose text editor, so you can use it for any type of text file like`.js`, `.html`, `.py` and `.css`
 
 Notice on the bottom of the terminal window that there is some text showing things like `^G Get Help` and `^O Write Out`. These are the commands that you can use in `nano`. The `^` character stands for `Ctrl`. So to `Write Out` (which means to save the file), you would type `Ctrl` and `O` (that's the letter `O`, not the number `0`). When you've typed these, you will see a bar appear at the bottom of the terminal that says `File Name to Write: chatServer.js`. This is the file name you are saving to. In this case, we want the same name, so we can just hit the `Enter` key. You will then see a message on the bottom that tells you how many lines were written, something like `[ Wrote 116 lines ]`.
 
-
+## Next
+Once you have completed these steps go to [Interfacing With The Pi Part I](/RGB_display/README.md)

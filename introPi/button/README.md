@@ -1,8 +1,6 @@
-# Interfacing with the Pi (or Pi Toppings)
+# Interfacing with the Pi II 
 
-The Raspberry Pi 4 has a variety of interfacing options. When you plug the pi in the red power LED turns on. Any time the SD card is accessed the green LED flashes. It has standard USB ports and HDMI ports. Less familiar it has a set of 20x2 pin headers that allow you to connect a various peripherals.
-![pi gpio diagram](https://www.raspberrypi.org/documentation/usage/gpio/images/GPIO-Pinout-Diagram-2.png)
-To learn more about any individual pin and what it is for go to [pinout.xyz](https://pinout.xyz/pinout/3v3_power) and click on the pin. Some terms may be unfamiliar but we will go over the relevant ones as they come up.
+In this lab we will expand our knowledge of using the raspberry pi. We will focus on integrating I2C devices for input and sensing.
 
 ## Pre-lab
 - Many of the components we will be using in this class will communicate with the I2C protocol. Prior to the lab read through [this](https://learn.sparkfun.com/tutorials/i2c/all) tutorial on how it works.
@@ -14,7 +12,7 @@ To learn more about any individual pin and what it is for go to [pinout.xyz](htt
 ### Hardware
 
 From your kit take out the [mini-PiTFT](https://learn.adafruit.com/adafruit-mini-pitft-135x240-color-tft-add-on-for-raspberry-pi), a [stemmaQT cable](https://www.adafruit.com/product/4210) and the [Qwiic Button](https://www.sparkfun.com/products/16842). <p float="left">
-  <img src="https://cdn-learn.adafruit.com/assets/assets/000/082/842/large1024/adafruit_products_4393_iso_ORIG_2019_10.jpg?1571856509" height="200" />
+  <img src="https://cdn-learn.adafruit.com/assets/assets/000/082/842/large1024/adafruit_products_4393_iso_ORIG_2019_10.jpg" height="200" />
   <img src="https://cdn-shop.adafruit.com/970x728/4210-02.jpg" height="200">
   <img src="https://cdn.sparkfun.com//assets/parts/1/5/7/6/7/16842-SparkFun_Qwiic_Button_-_Green_LED-01.jpg" height="200">
 </p>
@@ -41,10 +39,10 @@ pi@ixe00:~$ git clone path/to/repo
 pi@ixe00:~$ cd repo
 ```
 
-Set up your python environment, install the packages from the requirements.txt., and 
-
+We will continue to use the python environment we created previously. Activate that that environment by typing `workon circuitpython` then installing the requirements for this lab.
+your terminal should now look like this
 ```
-pi@ixe00:~/repo $ mkvirtualenv circuitpython
+pi@ixe00:~/repo $ workon circuitpython
 (circuitpython) pi@ixe00:~/buttonLab $ pip install -r requirements.txt 
 ```
 
